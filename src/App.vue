@@ -21,7 +21,12 @@
           </div>
         </nav>
     </div>
-    <router-view/>
+
+    <!-- Individual components injected -->
+    <div class="container">
+      <router-view/>
+    </div>
+    
     <!-- Footer -->
       <footer class="footer py-4">
         <div class="container">
