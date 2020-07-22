@@ -54,7 +54,7 @@ export default {
         phone_number: "1231231234",
         short_bio: "I'm great in macaroni and cheese!",
         linkedin_url: "http://linkedin.com/in/cheddar",
-        twitter_handle: "http://twitter.com/cheddar",
+        twitter_handle: "kraftcheese",
         github_url: "http://github/com/cheddar",
         personal_url: "http://cheddar.com/",
         image:
