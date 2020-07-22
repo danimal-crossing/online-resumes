@@ -37,7 +37,7 @@
 <script>
 import axios from "axios";
 export default {
-  data: function() {
+  data: function () {
     return {
       student: {
         first_name: "Cheddar",
@@ -51,18 +51,80 @@ export default {
         personal_url: "http://cheddar.com/",
         image:
           "https://www.nutritionadvance.com/wp-content/uploads/2018/05/Cheddar-Cheese-101.jpg",
-        skills: [{}],
-        education: [],
-        experience: [],
-        capstone: []
-      }
+        skills: [
+          { name: "Ruby" },
+          { name: "Rails" },
+          { name: "HTML" },
+          { name: "react" },
+        ],
+        education: [
+          {
+            start_date: "Jan. 1, 2019",
+            end_date: "Feb. 22, 2019",
+            degree: "Associates",
+            university_name: "Community Cheese College",
+            details: "Studied development of cheese",
+          },
+          {
+            start_date: "Mar. 1, 2019",
+            end_date: "Mar. 22, 2019",
+            degree: "Bachelors",
+            university_name: "Cheese College",
+            details: "Studied development of cheese",
+          },
+          {
+            start_date: "May. 1, 2019",
+            end_date: "July. 28, 2019",
+            degree: "Masters",
+            university_name: "Cheese University",
+            details: "Master Cheese",
+          },
+        ],
+        experience: [
+          {
+            start_date: "Aug.8, 2019",
+            end_date: "Sept. 22, 2019",
+            job_title: "Cheese Developer",
+            company_name: "Oberwise",
+            details: "Milked cows",
+          },
+          {
+            start_date: "Nov.8, 2019",
+            end_date: "Dec. 22, 2019",
+            job_title: "Cheese Developer",
+            company_name: "Dean's Dairy Farm",
+            details: "Formed cheese",
+          },
+          {
+            start_date: "Jan.8, 2019",
+            end_date: "Feb. 22, 2019",
+            job_title: "Cheese Engineer",
+            company_name: "Horizon",
+            details: "Managed cheese makers",
+          },
+        ],
+        capstone: [
+          {
+            name: "Local Cheese App",
+            description: "find local cheese sources based on your location",
+            url: "http://wheredacheeseat.com",
+            screenshot: "https://cheeseapp.jpg",
+          },
+          {
+            name: "Say Cheese",
+            description: "Cheese filters for cameras",
+            url: "http://saycheese.com",
+            screenshot: "https://saycheese.jpg",
+          },
+        ],
+      },
     };
   },
-  created: function() {
-    axios.get(`/api/students/${this.$route.params.id}`).then(response => {
+  created: function () {
+    axios.get(`/api/students/${this.$route.params.id}`).then((response) => {
       this.student = response.data;
     });
   },
-  methods: {}
+  methods: {},
 };
 </script>
