@@ -1,32 +1,54 @@
 <template>
   <div class="resume">
     <img :src="student.image" :alt="student.first_name">
-    <h1>firstname{{ student.first_name }} lastname {{ student.last_name }}</h1>
+    <h1>{{ student.first_name }} {{ student.last_name }}</h1>
     <p>
-      email {{ student.email}} |
-      phone {{ student.phone_number }} |
-      linkedin {{ student.linkedin_url }} |
-      githuburl {{ student.github_url}} |
-      twitter {{ student.twitter_handle }} |
-      personalblog {{ student.personal_url }}
+      {{ student.email}} |
+      {{ student.phone_number }} |
+      {{ student.linkedin_url }} |
+      {{ student.github_url}} |
+      {{ student.twitter_handle }} |
+      {{ student.personal_url }}
     </p>
-    <h3>shortbio {{ student.short_bio }}</h3>
+    <h3>{{ student.short_bio }}</h3>
 
     <h2>Skills</h2>
-      <div v-for="skill in student.skills">
-        Skill {{ skill.name }}
-      </div>
+    <div v-for="skill in student.skills">
+      Skill {{ skill.name }}
+    </div>
+
+    <h2>Capstone</h2>
+    <!-- <div v-for="capstone_item in student.capstone"> -->
+    <div>
+      <h4>name | url</h4>
+      <p>description</p>
+      <!-- <h4>{{ capstone_item.name }} | {{ capstone_item.url }}</h4>
+      <p>{{ capstone_item.description }}</p> -->
+      <img :src="capstone_item.screenshot" :alt="capstone_item.name">
+    </div>
 
     <h2>Experience</h2>
-      <div>
-        <h3>jobtitle {{ experience_item.job_title }} | companyname {{ experience_item.company_name }}</h3>
-        enddate {{ experience_item.end }}
-        startdate {{ experience_item.start_date }} - 
-        enddate {{ experience_item.end_date }}
-      </div>
+    <!-- <div v-for="experience_item in student.experience"> -->
+    <div>
+      <h4>jobtitle | companyname | startdate - enddate</h4>
+      <p>details</p>
+      <!-- <h4>{{ experience_item.job_title }} | {{ experience_item.company_name }} | 
+      {{ experience_item.start_date }} - 
+      {{ experience_item.end_date }} </h4>
+      <p>{{ experience_item.details }}</p> -->
+    </div>
 
 
     <h2>Education</h2>
+    <!-- <div v-for="education_item in student.education"> -->
+    <div>
+      <h4>degree | universityname | startdate - enddate</h4>
+      <p>details</p>
+      <!-- <h4>{{ experience_item.degree }} | {{ experience_item.university_name }} | 
+      {{ experience_item.start_date }} - 
+      {{ experience_item.end_date }} </h4>
+      <p>{{ experience_item.details }}</p> -->
+    </div>
 
   </div>
 </template>
