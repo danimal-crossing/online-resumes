@@ -28,6 +28,13 @@
 
     <h2>Education</h2>
 
+    <h2>Twitter Feed</h2>
+    <div class="twitter-feed">
+      <twitter>
+        <a class="twitter-timeline" :href="`https://twitter.com/${twitter_handle}?ref_src=twsrc%5Etfw`">Tweets by {{student.twitter_handle}}</a>
+      </twitter>
+    </div>
+
   </div>
 </template>
 
@@ -36,8 +43,9 @@
 
 <script>
 import axios from "axios";
+import twitter from "vue-twitter";
 export default {
-  data: function() {
+  data: function () {
     return {
       student: {
         first_name: "Cheddar",
@@ -54,15 +62,15 @@ export default {
         skills: [{}],
         education: [],
         experience: [],
-        capstone: []
-      }
+        capstone: [],
+      },
     };
   },
-  created: function() {
-    axios.get(`/api/students/${this.$route.params.id}`).then(response => {
+  created: function () {
+    axios.get(`/api/students/${this.$route.params.id}`).then((response) => {
       this.student = response.data;
     });
   },
-  methods: {}
+  methods: {},
 };
 </script>
