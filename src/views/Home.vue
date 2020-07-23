@@ -18,8 +18,8 @@
                         <router-link @click.native="$scrollToTop" :to="`/resume/${student.id}`"><img class="mx-auto rounded-circle" :src="student.photo_url" :alt="student.first_name" />
                         <h4>{{ student.first_name }} {{ student.last_name }}</h4></router-link>
                         <p class="text-muted">Web Developer</p>
-                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" :href="`https://twitter.com/${student.twitter_handle.substring(1)}`"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" :href="`${student.linkedin_url}`"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
               </div>
