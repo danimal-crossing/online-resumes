@@ -29,11 +29,13 @@
         </nav>
 
     </div>
-
-    <!-- Individual components injected -->
-    <div class="container">
-      <router-view/>
-    </div>
+    
+    <section class="page-section bg-light" id="team">
+      <!-- Individual components injected -->
+      <div class="container">
+        <router-view/>
+      </div>
+    </section>
     
     <!-- Footer -->
       <footer class="footer py-4">
