@@ -15,7 +15,7 @@
               <div v-for="student in students">
                 <div class="col-lg-4">
                     <div class="team-member">
-                        <router-link :to="`/resume/${student.id}`"><img class="mx-auto rounded-circle" :src="student.photo_url" :alt="student.first_name" />
+                        <router-link @click.native="$scrollToTop" :to="`/resume/${student.id}`"><img class="mx-auto rounded-circle" :src="student.photo_url" :alt="student.first_name" />
                         <h4>{{ student.first_name }} {{ student.last_name }}</h4></router-link>
                         <p class="text-muted">Web Developer</p>
                         <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
@@ -39,42 +39,42 @@ export default {
   data: function () {
     return {
       students: [
-        {
-          id: 2,
-          first_name: "Hubert",
-          last_name: "Shon",
-          photo_url: "/assets/img/team/1.jpg",
-        },
-        {
-          id: 1,
-          first_name: "Irving",
-          last_name: "Villaseñor",
-          photo_url: "/assets/img/team/2.jpg",
-        },
-        {
-          id: 1,
-          first_name: "Irving",
-          last_name: "Villaseñor",
-          photo_url: "/assets/img/team/2.jpg",
-        },
-        {
-          id: 1,
-          first_name: "Irving",
-          last_name: "Villaseñor",
-          photo_url: "/assets/img/team/2.jpg",
-        },
-        {
-          id: 1,
-          first_name: "Irving",
-          last_name: "Villaseñor",
-          photo_url: "/assets/img/team/2.jpg",
-        },
-        {
-          id: 1,
-          first_name: "Irving",
-          last_name: "Villaseñor",
-          photo_url: "/assets/img/team/2.jpg",
-        },
+        // {
+        //   id: 2,
+        //   first_name: "Hubert",
+        //   last_name: "Shon",
+        //   photo_url: "/assets/img/team/1.jpg",
+        // },
+        // {
+        //   id: 1,
+        //   first_name: "Irving",
+        //   last_name: "Villaseñor",
+        //   photo_url: "/assets/img/team/2.jpg",
+        // },
+        // {
+        //   id: 1,
+        //   first_name: "Irving",
+        //   last_name: "Villaseñor",
+        //   photo_url: "/assets/img/team/2.jpg",
+        // },
+        // {
+        //   id: 1,
+        //   first_name: "Irving",
+        //   last_name: "Villaseñor",
+        //   photo_url: "/assets/img/team/2.jpg",
+        // },
+        // {
+        //   id: 1,
+        //   first_name: "Irving",
+        //   last_name: "Villaseñor",
+        //   photo_url: "/assets/img/team/2.jpg",
+        // },
+        // {
+        //   id: 1,
+        //   first_name: "Irving",
+        //   last_name: "Villaseñor",
+        //   photo_url: "/assets/img/team/2.jpg",
+        // },
       ],
     };
   },
