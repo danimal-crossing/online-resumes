@@ -4,7 +4,7 @@
     <div v-for="student in students">
       <p>
         <router-link :to="`/resume/${student.id}`">{{ student.first_name }} {{ student.last_name }}</router-link>
-        <img :src="student.image" :alt="student.first_name">
+        <img :src="student.photo_url" :alt="student.first_name">
       </p>
     </div>
   </div>
@@ -16,27 +16,27 @@
 <script>
 import axios from "axios";
 export default {
-  data: function() {
+  data: function () {
     return {
       students: [
         {
           id: 2,
           first_name: "Hubert",
-          last_name: "Shon"
+          last_name: "Shon",
         },
         {
           id: 1,
           first_name: "Irving",
-          last_name: "Villaseñor"
-        }
-      ]
+          last_name: "Villaseñor",
+        },
+      ],
     };
   },
-  created: function() {
-    axios.get("/api/students").then(response => {
+  created: function () {
+    axios.get("/api/students").then((response) => {
       this.students = response.data;
     });
   },
-  methods: {}
+  methods: {},
 };
 </script>
