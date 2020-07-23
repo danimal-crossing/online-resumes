@@ -1,6 +1,6 @@
 <template>
   <div class="resume">
-    <img :src="student.image" :alt="student.first_name">
+    <img class=#student-image :src="student.photo_url" :alt="student.first_name">
     <h1>{{ student.first_name }} {{ student.last_name }}</h1>
     <p>
       {{ student.email }} |
@@ -10,7 +10,7 @@
       {{ student.twitter_handle }} |
       {{ student.website_url }}
     </p>
-    <h4>{{ student.bio }}</h4>
+    <h6>{{ student.bio }}</h6>
 
     <h2>Skills</h2>
     <div v-for="skill in student.skills">
@@ -19,32 +19,32 @@
 
     <h2>Capstone</h2>
     <div v-for="capstone in student.capstones">
-      <h4>{{ capstone.name }} | {{ capstone.url }}</h4>
+      <h5>{{ capstone.name }} | {{ capstone.url }}</h5>
       <p>{{ capstone.description }}</p>
-      <img v-if="capstone.screenshot_url" :src="capstone.screenshot_url" :alt="capstone.name">
+      <img class="student-image" v-if="capstone.screenshot_url" :src="capstone.screenshot_url" :alt="capstone.name">
     </div>
 
     <h2>Experience</h2>
     <div v-for="experience in student.experiences">
-      <h4>{{ experience.job_title }} | {{ experience.company_name }} | 
+      <h5>{{ experience.job_title }} | {{ experience.company_name }} | 
       {{ experience.start_date }} - 
-      {{ experience.end_date }} </h4>
+      {{ experience.end_date }} </h5>
       <p>{{ experience.details }}</p>
     </div>
 
 
     <h2>Education</h2>
     <div v-for="education in student.educations">
-      <h4>{{ education.degree }} | {{ education.university_name }} | 
+      <h5>{{ education.degree }} | {{ education.university_name }} | 
       {{ education.start_date }} - 
-      {{ education.end_date }} </h4>
+      {{ education.end_date }} </h5>
       <p>{{ education.details }}</p>
     </div>
 
     <h2>Twitter Feed</h2>
     <div class="twitter-feed">
       <twitter>
-        <a class="twitter-timeline" :href="`https://twitter.com/${student.twitter_handle}?ref_src=twsrc%5Etfw`">Tweets by {{student.twitter_handle}}</a>
+        <a class="twitter-timeline" :href="`https://twitter.com/${student.twitter_handle}?ref_src=twsrc%5Etfw`" data-tweet-limit="3">Tweets by {{student.twitter_handle}}</a>
       </twitter>
     </div>
 
@@ -52,6 +52,20 @@
 </template>
 
 <style>
+.student-image {
+  width: 200px;
+  height: 200px;
+}
+
+.capstone-image {
+  width: 200px;
+  height: 200px;
+}
+
+.twitter-feed {
+  margin: auto;
+  width: 300px;
+}
 </style>
 
 <script>
