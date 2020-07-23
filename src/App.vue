@@ -29,11 +29,14 @@
         </nav>
 
     </div>
+  
 
+  <section class="page-section bg-light" id="team">
     <!-- Individual components injected -->
     <div class="container">
       <router-view/>
     </div>
+  </section>
 
     <!-- Clients-->
         <div class="py-5">
@@ -54,6 +57,7 @@
                 </div>
             </div>
         </div>
+      
     
     <!-- Footer -->
       <footer class="footer py-4">
