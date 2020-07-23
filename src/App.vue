@@ -34,12 +34,32 @@
     <div class="container">
       <router-view/>
     </div>
+
+    <!-- Clients-->
+        <div class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="#!"><img class="img-fluid d-block mx-auto" src="/assets/img/logos/envato.jpg" alt="" /></a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="#!"><img class="img-fluid d-block mx-auto" src="/assets/img/logos/designmodo.jpg" alt="" /></a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="#!"><img class="img-fluid d-block mx-auto" src="/assets/img/logos/themeforest.jpg" alt="" /></a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="#!"><img class="img-fluid d-block mx-auto" src="/assets/img/logos/creative-market.jpg" alt="" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     
     <!-- Footer -->
       <footer class="footer py-4">
         <div class="container">
           <div class="row align-items-center">
-            <div class="col-lg-4 text-lg-left">Copyright © Your Website 2020</div>
+            <div class="col-lg-4 text-lg-left">Copyright © Your Momma's Website 2020</div>
             <div class="col-lg-4 my-3 my-lg-0">
               <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
               <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
