@@ -41,7 +41,7 @@
       <p>{{ education.details }}</p>
     </div>
 
-    <h2>Twitter Feed</h2><img
+    <h2>Twitter Feed</h2>
     <div class="twitter-feed">
       <twitter>
         <a class="twitter-timeline" :href="`https://twitter.com/${student.twitter_handle.substring(1)}?ref_src=twsrc%5Etfw`" data-tweet-limit="3">Tweets by {{student.twitter_handle}}</a>
